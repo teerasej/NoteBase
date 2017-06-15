@@ -1,0 +1,32 @@
+<!--
+  Generated template for the CreateNewNotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Note</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Title</ion-label>
+      <ion-input [(ngModel)]="newNote.title" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Message</ion-label>
+      <ion-textarea [(ngModel)]="newNote.message"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <button ion-button block (click)="dismiss(false)">Save</button>
+      <button ion-button block (click)="dismiss(true)"color="danger">Cancel</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
