@@ -23,10 +23,9 @@
       <ion-label stacked>Message</ion-label>
       <ion-textarea [(ngModel)]="newNote.message"></ion-textarea>
     </ion-item>
-    <ion-item>
-      <button ion-button block (click)="dismiss(false)">Save</button>
-      <button ion-button block (click)="dismiss(true)"color="danger">Cancel</button>
-    </ion-item>
   </ion-list>
+
+  <button ion-button block (click)="dismiss(false)">Save</button>
+  <button ion-button block (click)="dismiss(true)" color="danger">Cancel</button>
 
 </ion-content>
