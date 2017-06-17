@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
 import {ModalController,  NavController} from 'ionic-angular';
 
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  notes: FirebaseListObservable<any[]>;
+  notes = [];
 
-  constructor(public navCtrl: NavController, private db: AngularFireDatabase, private modalCtrl: ModalController) {
-     this.notes = db.list('/notes');
+  constructor(public navCtrl: NavController, private modalCtrl: ModalController) {
   }
 
   openCreateNote(){
@@ -22,7 +19,7 @@ export class HomePage {
     modal.onDidDismiss(data => {
       if(!data.isCancel) {
         this.notes.push(data.data);
-      }
+      } 
     });
   }
 
