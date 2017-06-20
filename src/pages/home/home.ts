@@ -11,11 +11,11 @@ export class HomePage {
 
   notes: FirebaseListObservable<any[]>;
 
-  constructor(public navCtrl: NavController, private db: AngularFireDatabase, private modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, private modalCtrl: ModalController, private db: AngularFireDatabase) {
      this.notes = db.list('/notes');
   }
 
-  openCreateNote(){
+  openCreateNewNote(){
     let modal = this.modalCtrl.create('CreateNewNotePage');
     modal.present();
 
