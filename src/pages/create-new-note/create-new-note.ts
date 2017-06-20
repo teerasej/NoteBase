@@ -23,12 +23,12 @@ export class CreateNewNotePage {
     console.log('ionViewDidLoad CreateNewNotePage');
   }
 
-  dismiss(isCancel){
-    if(isCancel){
-      this.viewCtrl.dismiss( { isCancel:true });
-    } else {
-      this.viewCtrl.dismiss( { isCancel:false, data: this.newNote });
-    }
+  save() {
+    this.viewCtrl.dismiss({ isCancel: false, data: this.newNote });
+  }
+
+  cancel() {
+    this.viewCtrl.dismiss({ isCancel: true });
   }
 
 
